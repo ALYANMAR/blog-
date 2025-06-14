@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "Blog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"John Doe\"}"
+        },
+        "url": "http://localhost:5000/users"
+      }
+    },
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"My First Post\", \"content\": \"Hello World!\", \"user_id\": 1}"
+        },
+        "url": "http://localhost:5000/posts"
+      }
+    },
+    {
+      "name": "Get Posts by User",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/posts/1"
+      }
+    },
+    {
+      "name": "Add Comment to Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\": \"Great post!\", \"post_id\": 1, \"user_id\": 1}"
+        },
+        "url": "http://localhost:5000/comments"
+      }
+    },
+    {
+      "name": "Get Comments for Post",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/comments/1"
+      }
+    }
+  ]
+}
